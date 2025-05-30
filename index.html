@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watson Networking Tools</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Watson Networking Tools</h1>
+
+  <section>
+    <h2>Network Tools</h2>
+    <input type="text" id="ipInput" placeholder="Enter IP or Domain">
+    <button onclick="ipLookup()">IP Lookup</button>
+    <div id="ipResult"></div>
+  </section>
+
+  <section>
+    <h2>Unit Converters</h2>
+    <label>KB to MB: <input type="number" id="kbInput"></label>
+    <button onclick="convertKB()">Convert</button>
+    <div id="kbResult"></div>
+  </section>
+
+  <section>
+    <h2>Tax Calculator (Canada - Simple)</h2>
+    <label>Income: <input type="number" id="incomeInput"></label>
+    <button onclick="calculateTax()">Calculate Tax</button>
+    <div id="taxResult"></div>
+  </section>
+
+  <section>
+    <h2>BMI Calculator</h2>
+    <label>Height (cm): <input type="number" id="heightInput"></label><br>
+    <label>Weight (kg): <input type="number" id="weightInput"></label><br>
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    <div id="bmiResult"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
