@@ -1,0 +1,1 @@
+console.log('React app would be loaded here');
