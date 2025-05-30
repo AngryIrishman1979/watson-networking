@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Watson Networking Tools</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1>Watson Networking Tools</h1>
+
+    <div class="tool">
+      <h2 onclick="toggle(this)">🔌 Network Tools</h2>
+      <div class="content">
+        <input type="text" id="ipInput" placeholder="Enter IP or Domain">
+        <button onclick="ipLookup()">IP Lookup</button>
+        <button onclick="dnsLookup()">DNS Lookup</button>
+        <button onclick="whoisLookup()">WHOIS (Simulated)</button>
+        <div id="ipResult"></div>
+      </div>
+    </div>
+
+    <div class="tool">
+      <h2 onclick="toggle(this)">📐 Unit Converters</h2>
+      <div class="content">
+        <input type="number" id="kbInput" placeholder="KB">
+        <button onclick="convertKB()">KB → MB</button><br>
+
+        <input type="number" id="speedInput" placeholder="Mbps">
+        <button onclick="convertSpeed()">Mbps → Gbps</button><br>
+
+        <input type="number" id="tempInput" placeholder="Celsius">
+        <button onclick="convertTemp()">C → F/K</button><br>
+
+        <input type="number" id="kmInput" placeholder="Kilometers">
+        <button onclick="convertDistance()">KM → Miles</button><br>
+
+        <input type="number" id="kgInput" placeholder="Kilograms">
+        <button onclick="convertWeight()">KG → Pounds</button><br>
+
+        <div id="convertResults"></div>
+      </div>
+    </div>
+
+    <div class="tool">
+      <h2 onclick="toggle(this)">🧮 Tax Calculator (Canada)</h2>
+      <div class="content">
+        <input type="number" id="incomeInput" placeholder="Annual Income (CAD)">
+        <select id="provinceInput">
+          <option value="ON">Ontario</option>
+          <option value="QC">Quebec</option>
+          <option value="BC">British Columbia</option>
+          <option value="AB">Alberta</option>
+          <option value="MB">Manitoba</option>
+          <option value="SK">Saskatchewan</option>
+          <option value="NS">Nova Scotia</option>
+          <option value="NB">New Brunswick</option>
+          <option value="NL">Newfoundland and Labrador</option>
+          <option value="PE">Prince Edward Island</option>
+          <option value="NT">Northwest Territories</option>
+          <option value="YT">Yukon</option>
+          <option value="NU">Nunavut</option>
+        </select>
+        <button onclick="calculateFullTax()">Calculate</button>
+        <div id="taxResult"></div>
+      </div>
+    </div>
+
+    <div class="tool">
+      <h2 onclick="toggle(this)">⚖ BMI Calculator</h2>
+      <div class="content">
+        <input type="number" id="heightInput" placeholder="Height (cm)">
+        <input type="number" id="weightInput" placeholder="Weight (kg)">
+        <button onclick="calculateBMI()">Calculate BMI</button>
+        <div id="bmiResult"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
